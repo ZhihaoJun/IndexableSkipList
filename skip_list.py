@@ -71,7 +71,7 @@ class SkipList(object):
   def at(self, idx):
     return self._at(idx).value
   
-  def range(self, start_idx, stop_idx):
+  def range(self, start_idx, end_idx):
     start_node = self._at(start_idx)
     dis = 0
     # sink down
@@ -80,7 +80,7 @@ class SkipList(object):
     
     cur = start_node
     result = []
-    while cur is not None and dis <= stop_idx - start_idx:
+    while cur is not None and dis <= end_idx - start_idx:
       result.append(cur.value)
       cur = cur.next
       dis += 1
