@@ -1,7 +1,7 @@
 # IndexableSkipList
 new data structure learnt, implemented in python  
 
-``` python
+```
 SkipList
   find(key) -> value
   at(index) -> value
